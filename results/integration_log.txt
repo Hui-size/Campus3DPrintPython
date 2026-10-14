@@ -1,0 +1,16 @@
+[PASS] I01 first order | expected=ORDER=1;PRICE=26.00;REMAIN=480 | actual=ORDER=1;PRICE=26.00;REMAIN=480
+[PASS] I02 invalid size | expected=ERR_SIZE | actual=ERR_SIZE
+[PASS] I03 failed order preserves state | expected=480,1 | actual=480,1
+[PASS] I04 invalid quote | expected=ERR_QUOTE_RANGE | actual=ERR_QUOTE_RANGE
+[PASS] I05 invalid day | expected=ERR_BOOKING_RANGE | actual=ERR_BOOKING_RANGE
+[PASS] I06 overflow capacity | expected=REJECT_CAPACITY | actual=REJECT_CAPACITY
+[PASS] I07 exact capacity | expected=ORDER=2;PRICE=81.00;REMAIN=0 | actual=ORDER=2;PRICE=81.00;REMAIN=0
+[PASS] I08 full day | expected=REJECT_CAPACITY | actual=REJECT_CAPACITY
+[PASS] I09 maintenance on | expected=MAINTENANCE_UPDATED | actual=MAINTENANCE_UPDATED
+[PASS] I10 reject maintenance | expected=REJECT_MAINTENANCE | actual=REJECT_MAINTENANCE
+[PASS] I11 maintenance preserves capacity | expected=600 | actual=600
+[PASS] I12 maintenance off | expected=MAINTENANCE_UPDATED | actual=MAINTENANCE_UPDATED
+[PASS] I13 other day independent | expected=ORDER=3;PRICE=0.38;REMAIN=599 | actual=ORDER=3;PRICE=0.38;REMAIN=599
+[PASS] I14 invalid maintenance day | expected=ERR_MAINTENANCE_SETTING | actual=ERR_MAINTENANCE_SETTING
+[PASS] I15 final state | expected=3,0,599 | actual=3,0,599
+INTEGRATION total=15 passed=15 failed=0
