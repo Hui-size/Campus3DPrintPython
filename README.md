@@ -52,6 +52,25 @@ python main.py --eval booking 3 121 120 0
 python main.py --integration
 ```
 
+## 实验二等价类测试
+
+实验二使用 `equivalence_test_runner.py` 对四个模块执行弱一般、强一般和弱健壮等价类测试，同时检查输入格式和完整订单状态变化。
+
+```powershell
+python equivalence_test_runner.py
+```
+
+执行后会生成：
+
+- `results/equivalence/classes.tsv`：等价类划分与覆盖方法
+- `results/equivalence/cases.tsv`：58 条正式用例及执行结果
+- `results/equivalence/supplementary_cases.tsv`：15 条补充检查结果
+- `results/equivalence/run_log.txt`：完整执行日志
+- `results/equivalence/screenshots/`：73 张逐用例执行截图
+- `results/equivalence/evidence_manifest.json`：报告和用例表使用的结构化结果
+
+实验二报告、PDF 和可筛选 Excel 用例表位于 `实验二` 目录。实验一原始版本保存在 Git 标签 `experiment1-baseline`，实验二测试位于分支 `experiment2-equivalence-testing`。
+
 ## 四人分工和文件位置
 
 | 组员 | 负责模块 | 主要文件 | 对应菜单 |

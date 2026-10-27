@@ -1,0 +1,4 @@
+﻿method	method_name	total	passed	failed
+weak_general	弱一般等价类	7	7	0
+strong_general	强一般等价类	11	11	0
+weak_robust	弱健壮等价类	40	40	0

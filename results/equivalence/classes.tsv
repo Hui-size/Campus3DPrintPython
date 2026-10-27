@@ -1,0 +1,58 @@
+﻿id	module	module_name	variable	kind	rule	representative	covered_by
+V-S-L	size	尺寸检查	长度	有效	1 <= 长度 <= 200	100	weak_general,strong_general,weak_robust
+V-S-W	size	尺寸检查	宽度	有效	1 <= 宽度 <= 200	100	weak_general,strong_general,weak_robust
+V-S-H	size	尺寸检查	高度	有效	1 <= 高度 <= 200	100	weak_general,strong_general,weak_robust
+I-S-L0	size	尺寸检查	长度	无效	长度 < 1	0	weak_robust
+I-S-L1	size	尺寸检查	长度	无效	长度 > 200	201	weak_robust
+I-S-W0	size	尺寸检查	宽度	无效	宽度 < 1	0	weak_robust
+I-S-W1	size	尺寸检查	宽度	无效	宽度 > 200	201	weak_robust
+I-S-H0	size	尺寸检查	高度	无效	高度 < 1	0	weak_robust
+I-S-H1	size	尺寸检查	高度	无效	高度 > 200	201	weak_robust
+V-Q-G	quote	费用计算	重量	有效	1 <= 重量 <= 500	100	weak_general,strong_general,weak_robust
+V-Q-MIN	quote	费用计算	时长	有效	1 <= 时长 <= 600	120	weak_general,strong_general,weak_robust
+V-Q-MAT0	quote	费用计算	材料	有效	材料 = 0（PLA）	0	weak_general,strong_general,weak_robust
+V-Q-MAT1	quote	费用计算	材料	有效	材料 = 1（PETG）	1	weak_general,strong_general,weak_robust
+V-Q-URG0	quote	费用计算	加急	有效	加急 = 0（否）	0	weak_general,strong_general,weak_robust
+V-Q-URG1	quote	费用计算	加急	有效	加急 = 1（是）	1	weak_general,strong_general,weak_robust
+I-Q-G0	quote	费用计算	重量	无效	重量 < 1	0	weak_robust
+I-Q-G1	quote	费用计算	重量	无效	重量 > 500	501	weak_robust
+I-Q-MIN0	quote	费用计算	时长	无效	时长 < 1	0	weak_robust
+I-Q-MIN1	quote	费用计算	时长	无效	时长 > 600	601	weak_robust
+I-Q-MAT	quote	费用计算	材料	无效	材料不是 0 或 1	2	weak_robust
+I-Q-URG	quote	费用计算	加急	无效	加急不是 0 或 1	2	weak_robust
+V-B-DAY	booking	预约条件检查	提前天数	有效	0 <= 提前天数 <= 7	3	weak_general,strong_general,weak_robust
+V-B-MIN	booking	预约条件检查	时长	有效	1 <= 时长 <= 600	120	weak_general,strong_general,weak_robust
+V-B-REM	booking	预约条件检查	剩余容量	有效	0 <= 剩余容量 <= 600	120	weak_general,strong_general,weak_robust
+V-B-MAINT0	booking	预约条件检查	维护状态	有效	维护状态 = 0（否）	0	weak_general,strong_general,weak_robust
+V-B-MAINT1	booking	预约条件检查	维护状态	有效	维护状态 = 1（是）	1	weak_general,strong_general,weak_robust
+I-B-DAY0	booking	预约条件检查	提前天数	无效	提前天数 < 0	-1	weak_robust
+I-B-DAY1	booking	预约条件检查	提前天数	无效	提前天数 > 7	8	weak_robust
+I-B-MIN0	booking	预约条件检查	时长	无效	时长 < 1	0	weak_robust
+I-B-MIN1	booking	预约条件检查	时长	无效	时长 > 600	601	weak_robust
+I-B-REM0	booking	预约条件检查	剩余容量	无效	剩余容量 < 0	-1	weak_robust
+I-B-REM1	booking	预约条件检查	剩余容量	无效	剩余容量 > 600	601	weak_robust
+I-B-MAINT	booking	预约条件检查	维护状态	无效	维护状态不是 0 或 1	2	weak_robust
+V-O-L	order	完整订单	长度	有效	1 <= 长度 <= 200	100	weak_general,strong_general,weak_robust
+V-O-W	order	完整订单	宽度	有效	1 <= 宽度 <= 200	100	weak_general,strong_general,weak_robust
+V-O-H	order	完整订单	高度	有效	1 <= 高度 <= 200	100	weak_general,strong_general,weak_robust
+V-O-G	order	完整订单	重量	有效	1 <= 重量 <= 500	100	weak_general,strong_general,weak_robust
+V-O-MIN	order	完整订单	时长	有效	1 <= 时长 <= 600	120	weak_general,strong_general,weak_robust
+V-O-MAT0	order	完整订单	材料	有效	材料 = 0（PLA）	0	weak_general,strong_general,weak_robust
+V-O-MAT1	order	完整订单	材料	有效	材料 = 1（PETG）	1	weak_general,strong_general,weak_robust
+V-O-URG0	order	完整订单	加急	有效	加急 = 0（否）	0	weak_general,strong_general,weak_robust
+V-O-URG1	order	完整订单	加急	有效	加急 = 1（是）	1	weak_general,strong_general,weak_robust
+V-O-DAY	order	完整订单	提前天数	有效	0 <= 提前天数 <= 7	0	weak_general,strong_general,weak_robust
+I-O-L0	order	完整订单	长度	无效	长度 < 1	0	weak_robust
+I-O-L1	order	完整订单	长度	无效	长度 > 200	201	weak_robust
+I-O-W0	order	完整订单	宽度	无效	宽度 < 1	0	weak_robust
+I-O-W1	order	完整订单	宽度	无效	宽度 > 200	201	weak_robust
+I-O-H0	order	完整订单	高度	无效	高度 < 1	0	weak_robust
+I-O-H1	order	完整订单	高度	无效	高度 > 200	201	weak_robust
+I-O-G0	order	完整订单	重量	无效	重量 < 1	0	weak_robust
+I-O-G1	order	完整订单	重量	无效	重量 > 500	501	weak_robust
+I-O-MIN0	order	完整订单	时长	无效	时长 < 1	0	weak_robust
+I-O-MIN1	order	完整订单	时长	无效	时长 > 600	601	weak_robust
+I-O-MAT	order	完整订单	材料	无效	材料不是 0 或 1	2	weak_robust
+I-O-URG	order	完整订单	加急	无效	加急不是 0 或 1	2	weak_robust
+I-O-DAY0	order	完整订单	提前天数	无效	提前天数 < 0	-1	weak_robust
+I-O-DAY1	order	完整订单	提前天数	无效	提前天数 > 7	8	weak_robust
