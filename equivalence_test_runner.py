@@ -741,9 +741,9 @@ def run(output_dir: Path = OUTPUT_DIR) -> int:
     )
 
     log_lines = [
-        "[PASS]" if row["status"] == "PASS" else "[FAIL]"
-        f" {row['id']} {row['method_name']} {row['module_name']} "
-        f"输入={row['inputs']} 预期={row['expected']} 实际={row['actual']}"
+        ("[PASS]" if row["status"] == "PASS" else "[FAIL]")
+        + f" {row['id']} {row['method_name']} {row['module_name']} "
+        + f"输入={row['inputs']} 预期={row['expected']} 实际={row['actual']}"
         for row in formal_rows
     ]
     log_lines.extend(
