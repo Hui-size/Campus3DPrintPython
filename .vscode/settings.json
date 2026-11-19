@@ -1,0 +1,27 @@
+{
+  // 使用系统 Python 3.12.8（与实验报告环境一致），不使用虚拟环境
+  "python.defaultInterpreterPath": "D:\\Python312\\python.exe",
+  "python.terminal.activateEnvironment": false,
+  "python.terminal.executeInFileDir": true,
+
+  // 项目源码与测试数据均为 UTF-8（TSV 带 BOM），关闭自动猜测避免中文乱码
+  "files.encoding": "utf8",
+  "files.autoGuessEncoding": false,
+
+  // Pylance 从项目根解析 modules、input_utils 等导入
+  "python.analysis.extraPaths": [],
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.useLibraryCodeForTypes": true,
+
+  // Code Runner 的 ▶ 按钮在集成终端运行，保证中文输出和 pause 行为可见
+  "code-runner.runInTerminal": true,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMap": {
+    "python": "python -u"
+  },
+
+  // TSV 结果文件按纯文本打开，避免被误识别
+  "files.associations": {
+    "*.tsv": "plaintext"
+  }
+}
